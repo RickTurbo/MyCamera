@@ -59,6 +59,12 @@ struct ContentView: View {
                 buttons: [
                     .default(Text("カメラ"), action: {
                         isPhotolibrary = false
+                        if UIImagePickerController.isSourceTypeAvailable(.camera) {
+                            print("カメラは利用できます")
+                            isShowSheet = true
+                        } else {
+                            print("カメラは利用できません")
+                        }
                         }),
                     .default(Text("フォトライブラリー"), action: {
                         isPhotolibrary = true
