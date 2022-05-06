@@ -12,6 +12,8 @@ struct ContentView: View {
     @State var captureImage: UIImage? = nil
     @State var isShowSheet = false
     @State var isShowActivity = false
+    @State var isPhotolibrary = false
+    @State var isShowAction = false
 
     var body: some View {
         VStack {
@@ -31,13 +33,7 @@ struct ContentView: View {
             Spacer()
 
             Button(action: {
-                if UIImagePickerController.isSourceTypeAvailable(.camera)
-                {
-                    print("カメラは利用できます")
-                    isShowSheet = true
-                } else {
-                    print("カメラは利用できません")
-                }
+                    isShowAction = true
             }) {
                 Text("カメラを起動する")
                     .frame(maxWidth: .infinity)
@@ -49,10 +45,29 @@ struct ContentView: View {
             }
             .padding()
             .sheet(isPresented: $isShowSheet) {
-                ImagePickerView(
-                    isShowSheet: $isShowSheet,
-                    captureImage: $captureImage
-                )
+                if isPhotolibrary {
+                    PHPickerView(
+                    isShowSheet: $isShowSheet, captureImage: $captureImage)
+                } else {
+                    ImagePickerView(isShowSheet: $isShowSheet,
+                    captureImage: $captureImage)
+                }
+            }
+            .actionSheet(isPresented: $isShowAction) {
+                ActionSheet(title: Text("確認"),
+                message: Text("選択してください"),
+                buttons: [
+                    .default(Text("カメラ"), action: {
+                        isPhotolibrary = false
+                        }),
+                    .default(Text("フォトライブラリー"), action: {
+                        isPhotolibrary = true
+                        isShowSheet = true
+                    }),
+
+                        .cancel(),
+
+                    ])
             }
 
             Button(action: {

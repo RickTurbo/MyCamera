@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		ECB45A662824FD9B00151940 /* PHPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB45A652824FD9B00151940 /* PHPickerView.swift */; };
 		ECCC6B44281A975500D5DD24 /* MyCameraApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECCC6B43281A975500D5DD24 /* MyCameraApp.swift */; };
 		ECCC6B46281A975500D5DD24 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECCC6B45281A975500D5DD24 /* ContentView.swift */; };
 		ECCC6B48281A976200D5DD24 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ECCC6B47281A976200D5DD24 /* Assets.xcassets */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		ECB45A652824FD9B00151940 /* PHPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PHPickerView.swift; sourceTree = "<group>"; };
 		ECCC6B40281A975500D5DD24 /* MyCamera.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyCamera.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECCC6B43281A975500D5DD24 /* MyCameraApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCameraApp.swift; sourceTree = "<group>"; };
 		ECCC6B45281A975500D5DD24 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -59,6 +61,7 @@
 				ECCC6B53281BEFDE00D5DD24 /* Info.plist */,
 				ECCC6B43281A975500D5DD24 /* MyCameraApp.swift */,
 				ECCC6B45281A975500D5DD24 /* ContentView.swift */,
+				ECB45A652824FD9B00151940 /* PHPickerView.swift */,
 				ECCC6B51281A97C900D5DD24 /* ImagePickerView.swift */,
 				ECCC6B54281BF10C00D5DD24 /* ActivityView.swift */,
 				ECCC6B47281A976200D5DD24 /* Assets.xcassets */,
@@ -145,6 +148,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ECB45A662824FD9B00151940 /* PHPickerView.swift in Sources */,
 				ECCC6B46281A975500D5DD24 /* ContentView.swift in Sources */,
 				ECCC6B55281BF10C00D5DD24 /* ActivityView.swift in Sources */,
 				ECCC6B52281A97C900D5DD24 /* ImagePickerView.swift in Sources */,
